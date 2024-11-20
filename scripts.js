@@ -1,3 +1,6 @@
+document.getElementById("leftArrow").addEventListener("contextmenu", (e) => e.preventDefault());
+document.getElementById("rightArrow").addEventListener("contextmenu", (e) => e.preventDefault());
+
 const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
 
@@ -185,3 +188,4 @@ const canvas = document.getElementById("gameCanvas");
     }
 
     draw();
+

@@ -188,54 +188,10 @@ const canvas = document.getElementById("gameCanvas");
     }
 
     draw();
-    let touchStartX = 0;
-
-canvas.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
-});
-
-canvas.addEventListener("touchmove", (e) => {
-  const touchEndX = e.touches[0].clientX;
-  const movementX = touchEndX - touchStartX;
-  paddleX += movementX * 0.1; // Adjust sensitivity
-
-  // Bound paddle within the canvas
-  if (paddleX < 0) paddleX = 0;
-  if (paddleX > canvas.width - paddleWidth) paddleX = canvas.width - paddleWidth;
-
-  touchStartX = touchEndX; // Update for next frame
-});
-
-let lastTime = 0;
-
-function draw(timestamp) {
-  if (timestamp - lastTime < 16) {
-    requestAnimationFrame(draw);
-    return;
-  }
-  lastTime = timestamp;
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBricks();
-  drawBall();
-  drawPaddle();
-  drawScore();
-  collisionDetection();
-
-  // Ball movement logic...
-  requestAnimationFrame(draw);
-}
-
-requestAnimationFrame(draw);
-
-const paddleSpeed = canvas.width * 0.015; // Dynamically scale speed
-if (rightPressed && paddleX < canvas.width - paddleWidth) paddleX += paddleSpeed;
-if (leftPressed && paddleX > 0) paddleX -= paddleSpeed;
-
-window.onload = () => {
-  document.getElementById("loadingScreen").style.display = "none";
-  resizeCanvas();
-  draw();
-};
-
+    
+    window.onload = () => {
+      resizeCanvas(); // Ensure the canvas is set up
+      draw();         // Start the game loop
+    };
+    
 

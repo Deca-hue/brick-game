@@ -189,9 +189,5 @@ const canvas = document.getElementById("gameCanvas");
 
     draw();
     
-    window.onload = () => {
-      resizeCanvas(); // Ensure the canvas is set up
-      draw();         // Start the game loop
-    };
-    
+   
 

@@ -3,23 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brick Breaker</title>
+  <title>Brick Game</title>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background: url(download.jpeg);
-      color: #fff;
-    }
     canvas {
       display: block;
-      
-      margin: 50px auto;
-      background: #444;
+      margin: 0 auto;
+      background: #eee;
+      border: 2px solid #000;
+    }
+    #controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    #mobileControls {
+      display: none;
+    }
+    #desktopControls {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      #desktopControls {
+        display: none;
+      }
+      #mobileControls {
+        display: block;
+      }
+    }
+    @media (min-width: 769px) {
+      #desktopControls {
+        display: block;
+      }
+      #mobileControls {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+  <div id="desktopControls">
+    <p style="text-align: center;">Use <strong>Arrow Keys</strong> to move the paddle</p>
+  </div>
+  <div id="mobileControls" style="text-align: center;">
+    <button id="leftArrow" style="font-size: 24px; padding: 10px;">⬅️</button>
+    <button id="rightArrow" style="font-size: 24px; padding: 10px;">➡️</button>
+  </div>
   <canvas id="gameCanvas"></canvas>
   <script src="scripts.js"></script>
 </body>

@@ -1,0 +1,41 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    margin-top: 20px;
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 440px;
+  }
+  
+  .candy {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .candy.red { background-color: red; }
+  .candy.blue { background-color: blue; }
+  .candy.green { background-color: green; }
+  .candy.yellow { background-color: yellow; }
+  .candy.purple { background-color: purple; }
+  
+  #score {
+    font-size: 20px;
+    margin: 10px;
+  }
+  

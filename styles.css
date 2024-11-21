@@ -1,41 +1,74 @@
-/* style.css */
+/* General body styling */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Game canvas styling */
+#gameCanvas {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Controls container */
+.controls {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Buttons for mobile controls */
+button {
+  background-color: #0095dd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+button:active {
+  background-color: #006bb3;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+/* Pause message styling */
+#pauseMessage {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+/* Show controls only on smaller screens */
+@media (max-width: 768px) {
+  .controls {
+    display: flex; /* Make visible on small screens */
   }
-  
-  h1 {
-    margin-top: 20px;
-  }
-  
-  #game-board {
-    display: grid;
-    grid-template-columns: repeat(8, 50px);
-    grid-template-rows: repeat(8, 50px);
-    gap: 5px;
-    justify-content: center;
-    margin: 20px auto;
-    width: 440px;
-  }
-  
-  .candy {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .candy.red { background-color: red; }
-  .candy.blue { background-color: blue; }
-  .candy.green { background-color: green; }
-  .candy.yellow { background-color: yellow; }
-  .candy.purple { background-color: purple; }
-  
-  #score {
-    font-size: 20px;
-    margin: 10px;
-  }
-  
+}

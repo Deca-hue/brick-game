@@ -60,17 +60,6 @@ document.getElementById("rightArrow").addEventListener("touchend", () => (rightP
 
 let rightPressed = false;
 let leftPressed = false;
-// Disable right-click context menu on the entire document
-document.addEventListener("contextmenu", (e) => e.preventDefault(), false);
-
-// Prevent touchstart and touchend from triggering context menu on small screens
-document.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-}, false);
-
-document.addEventListener("touchend", (e) => {
-  e.preventDefault();
-}, false);
 
 // Sound effects
 const brickHitSound = new Audio("bricks-104933.mp3");

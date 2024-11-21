@@ -54,9 +54,9 @@ button:hover {
 }
 
 
-/* Show controls only on smaller screens */
-@media (max-width: 1024px) {
+/* Show controls on tablets only (up to 900px) */
+@media (min-width: 768px) and (max-width: 900px) {
   .controls {
-    display: flex; /* Make visible on small screens */
+    display: flex;
   }
 }

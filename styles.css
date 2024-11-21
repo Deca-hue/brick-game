@@ -24,7 +24,7 @@ body {
 /* Controls container */
 .controls {
   display: none; /* Hidden by default */
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   justify-content: center;
   gap: 70px;

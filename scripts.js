@@ -60,6 +60,16 @@ document.getElementById("rightArrow").addEventListener("touchend", () => (rightP
 
 let rightPressed = false;
 let leftPressed = false;
+// Disable right-click context menu
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+// Disable default keydown behavior for arrow keys
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "ArrowUp" || e.key === "ArrowDown") {
+    e.preventDefault(); // Prevent default behavior for arrow keys
+  }
+});
 
 // Sound effects
 const brickHitSound = new Audio("bricks-104933.mp3");

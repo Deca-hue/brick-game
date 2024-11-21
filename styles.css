@@ -38,6 +38,7 @@ button {
   border-radius: 5px;
  width: 100px;
  height: 100px;
+ margin-bottom: 20px;
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(27, 27, 27, 0.3);
   transition: background-color 0.3s ease;

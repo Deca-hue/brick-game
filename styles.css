@@ -53,6 +53,9 @@ button:hover {
   background-color: #007acc;
 }
 
+body {
+  overflow-y: auto; /* Enable vertical scrolling */
+}
 
 /* Show controls only on smaller screens */
 @media (max-width: 1024px) {
